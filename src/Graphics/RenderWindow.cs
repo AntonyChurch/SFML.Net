@@ -721,7 +721,7 @@ namespace SFML.Graphics
         /// </summary>
         /// <returns>Relative mouse position</returns>
         ////////////////////////////////////////////////////////////
-        protected override Vector2i InternalGetMousePosition()
+        protected new Vector2i InternalGetMousePosition()
         {
             return sfMouse_getPositionRenderWindow(CPointer);
         }
@@ -734,7 +734,7 @@ namespace SFML.Graphics
         /// </summary>
         /// <param name="position">Relative mouse position</param>
         ////////////////////////////////////////////////////////////
-        protected override void InternalSetMousePosition(Vector2i position)
+        protected new void InternalSetMousePosition(Vector2i position)
         {
             sfMouse_setPositionRenderWindow(position, CPointer);
         }
@@ -748,7 +748,7 @@ namespace SFML.Graphics
         /// <param name="Finger">Finger index</param>
         /// <returns>Relative touch position</returns>
         ////////////////////////////////////////////////////////////
-        protected override Vector2i InternalGetTouchPosition(uint Finger)
+        protected new Vector2i InternalGetTouchPosition(uint Finger)
         {
             return sfTouch_getPositionRenderWindow(Finger, CPointer);
         }
